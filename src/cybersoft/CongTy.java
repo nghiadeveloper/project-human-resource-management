@@ -16,7 +16,7 @@ public class CongTy {
 		this.tenCongTy = tenCongTy;
 		this.maSoThue = maSoThue;
 		this.doanhThuThang = doanhThuThang;
-		this.danhSachNV =  new ArrayList<>();
+		this.danhSachNV = new ArrayList<>();
 	}
 
 	public void themNhanVien(NhanVien nv) {
@@ -67,31 +67,28 @@ public class CongTy {
 		for (NhanVien nv : danhSachNV) {
 			if (nv instanceof GiamDoc) {
 				GiamDoc gd = (GiamDoc) nv;
-				System.out.println("Thông tin giám đốc");
-				System.out.println("Mã số: " + gd.getMaSo());
-				System.out.println("Họ và tên: " + gd.getHoTen());
-				System.out.println("Số điện thoại: " + gd.getSoDienThoai());
-				System.out.println("Lương một ngày: " + gd.getLuongMotNgay());
-				System.out.println("Số ngày làm việc: " + gd.getSoNgayLamViec());
-				System.out.println("Cổ phần: " + gd.getCoPhan());
-				System.out.println("Lương tháng: " + gd.tinhLuongThang());
+				System.out.println("Giám đốc: Mã số: " + gd.getMaSo() 
+						+ " - Họ và tên: " + gd.getHoTen()
+						+ " - Số điện thoại: " + gd.getSoDienThoai() 
+						+ " - Lương một ngày: " + gd.getLuongMotNgay()
+						+ " - Số ngày làm việc: " + gd.getSoNgayLamViec() 
+						+ " - Cổ phần: " + gd.getCoPhan()
+						+ " - Lương tháng: " + gd.tinhLuongThang());
 			} else if (nv instanceof TruongPhong) {
 				TruongPhong tp = (TruongPhong) nv;
-				System.out.println("Thông tin trưởng phòng");
-				System.out.println("Mã số: " + tp.getMaSo());
-				System.out.println("Họ và tên: " + tp.getHoTen());
-				System.out.println("Số điện thoại: " + tp.getSoDienThoai());
-				System.out.println("Lương một ngày: " + tp.getLuongMotNgay());
-				System.out.println("Số ngày làm việc: " + tp.getSoNgayLamViec());
-				System.out.println("Lương tháng: " + tp.tinhLuongThang());
+				System.out.println("Trưởng phòng: Mã số: " + tp.getMaSo() 
+						+ " - Họ và tên: " + tp.getHoTen()
+						+ " - Số điện thoại: " + tp.getSoDienThoai() 
+						+ " - Lương một ngày: " + tp.getLuongMotNgay()
+						+ " - Số ngày làm việc: " + tp.getSoNgayLamViec() 
+						+ " - Lương tháng: " + tp.tinhLuongThang());
 			} else {
-				System.out.println("Thông tin nhán viên");
-				System.out.println("Mã số: " + nv.getMaSo());
-				System.out.println("Họ và tên: " + nv.getHoTen());
-				System.out.println("Số điện thoại: " + nv.getSoDienThoai());
-				System.out.println("Lương một ngày: " + nv.getLuongMotNgay());
-				System.out.println("Số ngày làm việc: " + nv.getSoNgayLamViec());
-				System.out.println("Lương tháng: " + nv.tinhLuongThang());
+				System.out.println("Nhán viên: Mã số: " + nv.getMaSo() 
+						+ " - Họ và tên: " + nv.getHoTen()
+						+ " - Số điện thoại: " + nv.getSoDienThoai() 
+						+ " - Lương một ngày: " + nv.getLuongMotNgay()
+						+ " - Số ngày làm việc: " + nv.getSoNgayLamViec() 
+						+ "- Lương tháng: " + nv.tinhLuongThang());
 			}
 		}
 	}
@@ -174,7 +171,7 @@ public class CongTy {
 			if (nv instanceof GiamDoc) {
 				GiamDoc gd = (GiamDoc) nv;
 				double thuNhap = gd.tinhThuNhap(loiNhuanCongTy);
-				System.out.printf("Giám đốc: %s, Tổng thu nhập: %.2f\n", gd.getHoTen(), thuNhap);
+				System.out.println("Giám đốc: " + gd.getHoTen() + " - Tổng thu nhập: " + thuNhap);
 			}
 		}
 	}

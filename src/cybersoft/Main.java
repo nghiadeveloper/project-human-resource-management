@@ -133,8 +133,7 @@ public class Main {
 									}
 								} while (coPhan <= 0 || coPhan > 100);
 
-								nv = new GiamDoc(maSoGiamDoc, hoTenGiamDoc, soDienThoaiGiamDoc, soNgayLamViecGiamDoc,
-										300, coPhan);
+								nv = new GiamDoc(maSoGiamDoc, hoTenGiamDoc, soDienThoaiGiamDoc, soNgayLamViecGiamDoc, 300, coPhan);
 								congTy.themNhanVien(nv);
 								System.out.println("Nhân sự đã được thêm.");
 								break;
@@ -154,8 +153,7 @@ public class Main {
 								int soNgayLamViecTruongPhong = scanner.nextInt();
 								scanner.nextLine();
 
-								nv = new TruongPhong(maSoTruongPhong, hoTenTruongPhong, soDienThoaiTruongPhong,
-										soNgayLamViecTruongPhong, 200);
+								nv = new TruongPhong(maSoTruongPhong, hoTenTruongPhong, soDienThoaiTruongPhong, soNgayLamViecTruongPhong, 200);
 								congTy.themNhanVien(nv);
 								System.out.println("Nhân sự đã được thêm.");
 								break;
@@ -210,12 +208,12 @@ public class Main {
 							NhanVienThuong nvThuong = (NhanVienThuong) nhanVienThuocTruongPhong;
 							TruongPhong truongPhong3 = nvThuong.getTruongPhongHienTai();
 							if (truongPhong3 != null) {
-								System.out.println("Nhân viên - Mã số: " + nvThuong.getMaSo() + " - Họ và tên: "
-										+ nvThuong.getHoTen() + " Thuộc trưởng phòng - Mã số: " + truongPhong3.getMaSo()
-										+ "Họ và tên: " + truongPhong3.getHoTen());
+								System.out.println("Nhân viên: Mã số: " + nvThuong.getMaSo() 
+										+ " - Họ và tên: " + nvThuong.getHoTen() 
+										+ " thuộc trưởng phòng - Mã số: " + truongPhong3.getMaSo()
+										+ " - Họ và tên: " + truongPhong3.getHoTen());
 							} else {
-								System.out.println("Nhân viên - Mã số: " + nvThuong.getMaSo() + " - Họ và tên: "
-										+ nvThuong.getHoTen() + " chưa được phân bổ vào trưởng phòng nào");
+								System.out.println("Nhân viên: Mã số: " + nvThuong.getMaSo() + " - Họ và tên: " + nvThuong.getHoTen() + " chưa được phân bổ vào trưởng phòng nào");
 							}
 						}
 					}
@@ -238,13 +236,13 @@ public class Main {
 				if (congTy != null) {
 					NhanVienThuong nvLuongCaoNhat = congTy.timNhanVienThuongLuongCaoNhat();
 					if (nvLuongCaoNhat != null) {
-						System.out.println("Nhân viên có lương cao nhất: ");
-						System.out.println("Mã số: " + nvLuongCaoNhat.getMaSo());
-						System.out.println("Họ tên: " + nvLuongCaoNhat.getHoTen());
-						System.out.println("Số điện thoại: " + nvLuongCaoNhat.getSoDienThoai());
-						System.out.println("Số ngày làm việc: " + nvLuongCaoNhat.getSoNgayLamViec());
-						System.out.println("Lương một ngày: " + nvLuongCaoNhat.getLuongMotNgay());
-						System.out.println("Lương tháng: " + nvLuongCaoNhat.tinhLuongThang());
+						System.out.println("Nhân viên có lương cao nhất: " 
+								+ "Mã số: " + nvLuongCaoNhat.getMaSo()
+								+ " - Họ tên: " + nvLuongCaoNhat.getHoTen() 
+								+ " - Số điện thoại: " + nvLuongCaoNhat.getSoDienThoai() 
+								+ " - Số ngày làm việc: " + nvLuongCaoNhat.getSoNgayLamViec() 
+								+ " - Lương một ngày: " + nvLuongCaoNhat.getLuongMotNgay() 
+								+ " - Lương tháng: " + nvLuongCaoNhat.tinhLuongThang());
 					} else {
 						System.out.println("Không có nhân viên thường trong công ty.");
 					}

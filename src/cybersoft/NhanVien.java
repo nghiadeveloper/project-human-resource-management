@@ -62,11 +62,8 @@ public abstract class NhanVien {
 	public abstract double tinhLuongThang();
 
 	public void hienThiThongTinNhanVien() {
-		System.out.println("Mã số: " + this.maSo);
-		System.out.println("Họ và tên: " + this.hoTen);
-		System.out.println("Số điện thoại: " + this.soDienThoai);
-		System.out.println("Số ngày làm việc: " + this.soNgayLamViec);
-		System.out.println("Lương một ngày: " + this.luongMotNgay);
+		System.out.println("Mã số: " + this.maSo + " - Họ và tên: " + this.hoTen + " - Số điện thoại: " + this.soDienThoai
+						+ " - Số ngày làm việc: " + this.soNgayLamViec + " - Lương một ngày: " + this.luongMotNgay);
 	}
 
 }
