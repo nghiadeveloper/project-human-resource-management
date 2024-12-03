@@ -47,7 +47,7 @@ public class CongTy {
 
 			if (tp != null) {
 				tp.xoaNhanVien(nvThuong);
-				System.out.println("Nhân viên đã được xóa khỏi danh sách nshân viên dưới quyền của trưởng phòng.");
+				System.out.println("Nhân viên đã được xóa khỏi danh sách nhân viên dưới quyền của trưởng phòng.");
 			} else {
 				System.out.println("Nhân viên không có trưởng phòng.");
 			}
@@ -88,7 +88,7 @@ public class CongTy {
 						+ " - Số điện thoại: " + nv.getSoDienThoai() 
 						+ " - Lương một ngày: " + nv.getLuongMotNgay()
 						+ " - Số ngày làm việc: " + nv.getSoNgayLamViec() 
-						+ "- Lương tháng: " + nv.tinhLuongThang());
+						+ " - Lương tháng: " + nv.tinhLuongThang());
 			}
 		}
 	}
